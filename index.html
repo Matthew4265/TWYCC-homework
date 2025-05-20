@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>暖暖區居民分析圓餅圖</title>
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+  <div class="flex flex-col items-center p-4 rounded-lg shadow-md max-w-4xl mx-auto">
+    <h2 class="text-xl font-bold mb-4">暖暖區居民分析圓餅圖</h2>
+    
+    <!-- 標籤切換按鈕 -->
+    <div class="flex flex-wrap justify-center mb-4 space-x-1" id="tab-buttons">
+      <button class="px-3 py-1 rounded bg-blue-500 text-white" data-tab="population">人口結構</button>
+      <button class="px-3 py-1 rounded bg-gray-200" data-tab="housing">居住環境</button>
+      <button class="px-3 py-1 rounded bg-gray-200" data-tab="occupation">職業分布</button>
+      <button class="px-3 py-1 rounded bg-gray-200" data-tab="risk">風險暴露</button>
+      <button class="px-3 py-1 rounded bg-gray-200" data-tab="vulnerability">族群脆弱性</button>
+    </div>
+    
+    <h3 class="text-lg font-semibold mb-2" id="chart-title">暖暖區人口年齡結構</h3>
+    
+    <!-- 圓餅圖容器 -->
+    <div class="w-full h-80">
+      <canvas id="pie-chart"></canvas>
+    </div>
+    
+    <!-- 說明文字 -->
+    <div class="mt-4 text-sm text-gray-600 w-full max-w-md">
+      <p class="mb-2">* 數據來源：基於基隆市政府統計資料(截至2024年)及GEE圖層分析</p>
+      <p>* 點擊上方按鈕切換不同分析維度，滑鼠移至圓餅圖上可查看詳細說明</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

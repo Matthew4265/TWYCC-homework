@@ -1,0 +1,18 @@
+/* styles.css */
+.chart-tooltip {
+  background: white;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.chart-tooltip p {
+  margin: 0;
+}
+.chart-tooltip .title {
+  font-weight: bold;
+}
+.chart-tooltip .description {
+  font-size: 0.875rem;
+  color: #4b5563;
+}
